@@ -105,9 +105,6 @@ $(document).ready(function () {
               )    
             theRestart()       
         } // if statement end bracket
-
-
-
       
         
     
