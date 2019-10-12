@@ -1,39 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>RPG Game</title>    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">    
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Lacquer&display=swap" rel="stylesheet">
+    <title>RPG Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    
 </head>
+
 <body>
 
-    <h1>RPG Game</h1>
+    <div class="container column pl-4 pr-4">
 
-    <div id="container">
+        <div class="row">
 
-        <p>Pick Your Player: <span id="pickPlayer"></span></p>
-        <span class="image"><img src="assets/images/korra.png" value="korra"></span>
-        <span class="image"><img src="assets/images/mako.png" value="mako"></span>
-        <span class="image"><img src="assets/images/asami.png" value="asami"></span>
-        <span class="image"><img src="assets/images/bolin.png" value="bolin"></span>
+            <div class="jumbotron p-4">
+                    <img class="img-fluid" alt="Responsive image" src="assets/images/banner.jpg" alt="">
+                    
+            </div>
+        
+        </div>
+
+        <div class="row">
+
+                <div class="col-sm-6">
+
+                <section>
+                    <h2>Welcome to Republic City — the Birthplace of Pro-Bending!</h2>
+                    <br>
+                    <p>People have come from all over the four nations to watch our pro-benders Korra, Mako, Asami and Bolin battle against each other in the Pro-Bending Finals.</p>
+                    <p>Each fighter has Health Points (HP), as well as Attack Points (AP) and Counter Attack Points (CAP). With every round, characters AP points will be deducted from fighters HP. While attacks will not increase for defeneders, your character will grow in strength as the fights on go on. The fighter with the the most HP at the end of the day will be named the 2019 Pro-Bending Champion!</p>    
+                                     
+                    <p>Let the games begin!</p>
+
+                    <p>Please note that you can check each characters stat at the bottom of the screen.</p>
+
+                </section>
+
+
+                </div>
+
+                <div class="col-sm-6">
+
+                    <h2>Round Info</h2>
+                    <section id="theInfo"><p>The Fight Hasn't Started Yet</p></section>
+                    <br>
+                    <section id="playerHP">Step 1: Pick Your Character</section>
+                    <br>
+                    <section id="defenderHP">Step 2: Pick Your Opponent</section>
+                    <br>
+                    <button id="attk-button">Attack!</button>             
+
+
+                </div>
+            
+        </div>
+
+
         <hr>
-        <p>Opponent: <span id="opponentDiv"></span></p>
-        <hr>
-        <p>You Are Fighting: <span id="fightingDiv"></span></p>
 
-        <button id="attk-button">Attack</button>
+        <div class="row">
+
+            <div class="col-sm-12">
+                <section class="d-flex justify-content-center" id="players">
+                        <span class="image pl-5 pr-5" value="korra"><img class="img-fluid" alt="Responsive image" src="assets/images/korra.png"></span>
+                        <span class="image pl-5 pr-5" value="mako"><img class="img-fluid" alt="Responsive image" src="assets/images/mako.png"></span>
+                        <span class="image pl-5 pr-5" value="asami"><img class="img-fluid" alt="Responsive image" src="assets/images/asami.png"></span>
+                        <span class="image pl-5 pr-5" value="bolin"><img  class="img-fluid" alt="Responsive image"src="assets/images/bolin.png"></span>
+                </section>
+            
+            </div>
+
+        </div>
+
+        
+
+        <div class="row">
+
+            <div class="col-sm-3">
+
+                <p class="text-center">Your Fighter:</p>
+                <section class="d-flex justify-content-center" id="your-player">
+            
+            </div>
 
 
+            <div class="col-sm-3">
+
+                <p class="text-center">The Defender:</p>
+                <section class="align-self-center" id="defender"></section>
+                
+            </div>
+
+            <div class="col-sm-6">
+
+                    <p class="text-center">Your Opponents:</p>    
+                    <section id="opponents"></section>
+                    
+            </div>
+    
+        </div>
+
+        <hr>        
+
+        <br>
+        <div class="row text-center">            
+
+                <div class="col-sm-3">
+    
+                    <h4 class="stats">Korra</h4>
+                    <p class="stats">Ability: The Avatar <br>
+                    HP: 150 <br>
+                    AP/CAP: 6    
+                    </p>
+    
+                </div>    
+                
+                <div class="col-sm-3">
+
+                    <h4 class="stats">Mako</h4>
+                    <p class="stats">Ability: Fire Bender <br>
+                    HP: 130 <br>
+                    AP/CAP: 4
+                    </p>
+        
+                </div>   
+
+                <div class="col-sm-3">
+    
+                    <h4 class="stats">Asami</h4>
+                    <p class="stats">Ability: Intelligence <br>
+                    HP: 110 <br>
+                    AP/CAP: 3
+                    </p>
+        
+                </div>   
+
+                <div class="col-sm-3">
+    
+                    <h4 class="stats">Bolin</h4>
+                    <p class="stats">Ability: Earth Bender <br>
+                    HP: 140 <br>
+                    AP/CAP: 5
+                    </p>
+        
+                </div>   
+        
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-12">  
+
+                    <div class="card text-center">
+
+                            <div class="card-header">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Thanks for Playing My Legend of Korra RPG Figting Game!</h5>
+                                <p class="card-text">To go back to my portfolio, click the button below.</p>
+                                <a href="#" class="btn btn-primary">Portfolio</a>
+                            </div>
+                            <div class="card-footer text-muted">
+                            </div>
+                    </div>
+                
+                </div>
 
 
+            </div>
 
     </div>
 
 
 
+
+        
+
+
     <script src="assets/javascript/game.js"></script>
-    
+
 </body>
+
 </html>

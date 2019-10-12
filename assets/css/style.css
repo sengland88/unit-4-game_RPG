@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
+    font-family: 'Indie Flower', cursive;
+}
+
+button {
+    font-size: 32px;
+    background-color: red;
+    border-radius: 12px;
+    background-color: maroon;
+    color: white;
+}
+
+.column {
+    background-color: white;
+}
+
+.stats {
+    font-family: 'Oswald', sans-serif;
+}

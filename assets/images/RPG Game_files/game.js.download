@@ -1,0 +1,48 @@
+$(document).ready(function() {
+
+let thePlayer
+let theDefender
+let choosePlayer = false;
+let chooseDefender = false;
+
+let players = {
+    korra: {"hp" : 150, "ap": 12, "cap": 6},
+    mako: {"hp" : 130, "ap": 8, "cap": 4},
+    asami: {"hp" : 110, "ap": 6, "cap": 3},
+    bolin: {"hp" : 140, "ap": 10, "cap": 5},
+}
+
+$(".image").on("click", function(){
+    let playerName = $(this).attr("value");
+    console.log(players[playerName].hp)
+})
+
+
+
+//attack function
+    $("#attk-button").on("click", function() {
+
+        thePlayer = 
+        theDefender =    
+
+        theDefender.hp = theDefender.hp - thePlayer.ap
+        thePlayer.hp = thePlayer.hp - theDefender.cap
+        $("#fightingDiv").html(korra.image)
+
+        thePlayer.ap = thePlayer.ap + thePlayer.ap       
+
+        if (thePlayer.hp <= 0) {
+            console.log("game over")
+            //trigger reset function        
+        }
+        if (theDefender.hp <= 0) {
+            //choose another player from the opponent div
+            console.log("pick another opponent")
+        }   
+    })
+
+
+
+
+}) //ready function closing brackets
+
