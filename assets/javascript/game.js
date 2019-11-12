@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $(".yourSelections").hide()
+
     let thePlayer
     let theDefender
 
@@ -9,28 +11,28 @@ $(document).ready(function () {
             "ability": "The Avatar",
             "hp": 150,
             "ap": 6,
-            "cap": 6
+            "cap": 21,
         },
         mako: {
             "name": "Mako",
             "ability": "Fire Bending",
             "hp": 130,
             "ap": 4,
-            "cap": 4
+            "cap": 17,
         },
         asami: {
             "name": "Asami",
             "ability" : "Intelligence",
             "hp": 110,
             "ap": 3,
-            "cap": 3
+            "cap": 15,
         },
         bolin: {
             "name": "Bolin",
             "ability": "Earth Bending",
             "hp": 140,
             "ap": 5,
-            "cap": 5
+            "cap": 19
         }
     }
 
@@ -44,6 +46,7 @@ $(document).ready(function () {
             thePlayer = $(this).attr("value");
             $("#your-player").append($(this));
             $("#playerHP").html(`${players[thePlayer].name} HP is ${players[thePlayer].hp}`)
+            $(".yourSelections").show()
             
         } else {
             //move player to defender section
